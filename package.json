@@ -1,0 +1,16 @@
+{
+  "name": "dotnet-exemplar",
+  "version": "0.0.1",
+  "description": "This package.json only exists to run dotnet format on commit with husky",
+  "scripts": {},
+  "author": "Seth Reid",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative"
+    }
+  },
+  "lint-staged": {
+    "*.cs": "dotnet format --include"
+  }
+}
